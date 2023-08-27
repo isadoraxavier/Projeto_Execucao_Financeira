@@ -1,0 +1,100 @@
+— criando a dim_orgao –
+create table dw_02.dim_orgao as
+SELECT distinct codigo_orgao as codigo, dsc_orgao as descrição
+from public.execucao_financeira_despesa
+
+— criando a dim_credor –
+create table dw.dim_credor as
+SELECT distinct cod_credor as codigo, dsc_nome_credor as descricao
+from execucao_financeira_despesa
+
+– criando a dim_fonte –
+create table dw_02.dim_fonte as
+SELECT distinct cod_fonte as codigo, dsc_fonte as descricao
+from public.execucao_financeira_despesa
+
+— criando a dim_funcao –
+create table dw.dim_funcao as
+SELECT distinct codigo_funcao as codigo, dsc_funcao as descricao
+from public.execucao_financeira_despesa
+
+— criando a dim_item –
+
+create table dw_02.dim_item_categoria as
+SELECT distinct cod_item as codigo, dsc_item as descricao
+from public.execucao_financeira_despesa
+
+— criando a dim_item_elemento  –
+create table dw.dim_item_elemento as
+select distinct cod_item_elemento, dsc_item_elemento
+ from public.execucao_financeira_despesa
+
+— criando a dim_item_categoria  –
+create table dw.dim_item_categoria as select distinct cod_item_categoria , dsc_item_categoria from execucao_financeira_despesa
+
+— criando a dim_item_grupo  –
+create table dw.dim_item_grupo as
+SELECT distinct cod_item_grupo, dsc_item_grupo
+from execucao_financeira_despesa
+
+— criando a dim_programa–
+create table dw.dim_programa as
+SELECT distinct cod_programa, dsc_programa
+from execucao_financeira_despesa
+
+— criando a dim_subfuncao–
+create table dw.dim_subfuncao as
+SELECT distinct cod_subfuncao, dsc_subfuncao
+from execucao_financeira_despesa
+
+— criando a dim_num_ano_np–
+create table dw.dim_num_ano_np as
+SELECT distinct num_ano_np,
+from execucao_financeira_despesa
+
+— criando a dim_item-modalidade–
+create table dw.dim_item_modalidade
+as select distinct cod_item_modalidade ,
+dsc_item_modalidade
+from execucao_financeira_despesa
+
+— criando a dim_item-modalidade–
+
+
+
+
+— criando a fato-execucao–
+
+create table dw_02.fato_execucao as 
+select id
+	,num_ano as "número do ano"
+	,cod_ne as "código ne"
+	,codigo_orgao as "código do órgão"
+	,cod_credor as "código do credor"
+	,cod_fonte as "código fonte"
+	,cod_funcao as "código função"
+	,cod_item as "código item"
+	,cod_item_elemento as "código item elemento "
+	,cod_item_categoria as "código item categoria"
+	,cod_item_grupo as "código item grupo"
+	,dsc_modalidade_licitacao as "descrição da modalidade da licitação"
+	,cod_item_modalidade as "código item modalidade"
+	,cod_programa as "código programa"
+	,cod_subfuncao as "código subfunção"
+	,num_sic as "número sic"
+	,cod_np as "código np"
+	,vlr_empenho as "valor do empenho"
+	,vlr_liquidado as "valor liquidado"
+	,valor_pago as "valor pago"
+	,vlr_resto_pagar as "valor resto a pagar"
+	,dth_empenho as "data do empenho"
+	,dth_pagamento as "data do pagamento"
+	,dth_liquidacao as "data liquidado"
+	,dth_processamento as "data do processamento"
+	num_ano_np as "número ano np"
+from public.execucao_financeira_despesa
+
+
+
+
+
