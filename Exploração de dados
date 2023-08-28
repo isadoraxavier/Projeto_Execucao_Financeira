@@ -29,3 +29,41 @@ GRANT ALL ON SCHEMA public TO pg_database_owner;
 
 # Exploração dos dados  
 
+
+
+
+
+
+# Tratativa 1
+
+Foram deletados os campos onde o Valor Empenho fosse menor ou igual a zero.
+
+DELETE FROM public.execucao_financeira_despesa
+	WHERE vlr_empenho <=0;
+
+# 2º Tratativa
+Na execução financeira foi realizado a exclusão onde a Contagem do Código NP (Número Pagamento) for > 1 para remover as duplicatas.
+
+Código Utilizado:
+DELETE FROM public.execucao_financeira_despesa
+    WHERE (cod_np,vlr_empenho, valor_pago, vlr_resto_pagar, dth_empenho, dth_pagamento) IN
+
+# 3º Tratativa
+Na execução financeira fizemos a exclusão das tuplas que foram selecionadas pelo SELECT quando a contagem fosse maior que 1.
+
+Código Utilizado:
+DELETE FROM public.execucao_financeira_despesa
+    WHERE (cod_np,vlr_empenho, valor_pago, vlr_resto_pagar, dth_empenho, dth_pagamento) IN 
+(
+  SELECT cod_np,vlr_empenho, valor_pago, vlr_resto_pagar, dth_empenho, dth_pagamento
+  FROM public.execucao_financeira_despesa
+  GROUP BY cod_np,vlr_empenho, valor_pago, vlr_resto_pagar, dth_empenho, dth_pagamento
+  HAVING COUNT(*) > 1
+);
+
+#4º Tratativa
+Na tabela Execução Financeira realizamos a exclusão onde o Número SIC e o Código SIC fossem iguais a zero.
+
+Código Utilizado:
+DELETE FROM public.execucao_financeira_despesa
+WHERE num_sic IS NULL AND cod_np IS NULL;
