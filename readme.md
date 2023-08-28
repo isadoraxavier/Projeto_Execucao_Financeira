@@ -54,5 +54,3 @@ dth_processamento: Data de processamento (date)
 num_ano_np: Ano do NP (character varying)
 Chave Primária: id
 
-
-# Definições  
