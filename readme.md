@@ -1,17 +1,17 @@
-# Projeto_Execucao_Financeira
+# Projeto_Execucao_Financeira 
 Análise de Dados de Execução Financeira do Governo do Estado do Ceará
 
-#Sobre
+# 👉 Sobre
 O banco de dados "execucao_financeira" contém informações sobre as despesas de execução financeira. Ele armazena os detalhes de cada despesa, como ano, código do órgão, credor, fonte de recursos, função, item, modalidade de licitação, programa, subfunção, valores empenhados, liquidados, pagos e restos a pagar, entre outros dados.
 
-# Objetivo 
+# 📍 Objetivo 
 O projeto "Execução Financeira" busca explorar os dados do Governo do Ceará, utilizando SQL no banco Postgres e responder algumas perguntas:
   1) Qual mês teve maior custo? Totais Gerais de Valor por ano e mês; 
   2) Qual função e subfunção teve maior orçamento? Totais Gerais de Função e/ou Subfunção por ano e mês;
   3) Qual fonte mais solicitou recursos? Totais Gerais de Fonte e/ou Programa por ano e mês;
   4) Qual credor mais solicitou licitações? Totais Gerais de Item Elemento e/ou Credor por ano e mês.
 
-# Base de Dados e Banco de Dados 
+# 🎲 Base de Dados e Banco de Dados 
 Base: Execução Financeira V4
 Tuplas: 2.025.116
 Colunas:
@@ -54,5 +54,6 @@ dth_processamento: Data de processamento (date)
 num_ano_np: Ano do NP (character varying)
 Chave Primária: id
 
-#Link Final (Dashboard) 
+# 🎯 Link Final (Dashboard) 
+
 https://app.powerbi.com/view?r=eyJrIjoiMTQzNDQ0YTEtZmQ2ZC00NzYwLTg0OWMtOGQ3ZGJlOTEwODcxIiwidCI6ImIxNTZhNTQxLWUyMzYtNGVkYi05MWJmLWZjYTI1YzcwMDRmOSJ9
