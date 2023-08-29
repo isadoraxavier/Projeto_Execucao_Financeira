@@ -54,3 +54,5 @@ dth_processamento: Data de processamento (date)
 num_ano_np: Ano do NP (character varying)
 Chave Primária: id
 
+#Link Final (Dashboard) 
+https://app.powerbi.com/view?r=eyJrIjoiMTQzNDQ0YTEtZmQ2ZC00NzYwLTg0OWMtOGQ3ZGJlOTEwODcxIiwidCI6ImIxNTZhNTQxLWUyMzYtNGVkYi05MWJmLWZjYTI1YzcwMDRmOSJ9
