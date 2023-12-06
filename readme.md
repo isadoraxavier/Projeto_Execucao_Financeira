@@ -1,5 +1,5 @@
-# Projeto_Execucao_Financeira 
-Análise de Dados de Execução Financeira do Governo do Estado do Ceará
+# Projeto_Execucao_Financeira
+Análise de Dados de Execução Financeira do Governo do Estado do Ceará. Trabalho de conclusão do primeiro módulo do curso Data Analytics na Digital College
 
 # 👉 Sobre
 O banco de dados "execucao_financeira" contém informações sobre as despesas de execução financeira. Ele armazena os detalhes de cada despesa, como ano, código do órgão, credor, fonte de recursos, função, item, modalidade de licitação, programa, subfunção, valores empenhados, liquidados, pagos e restos a pagar, entre outros dados.
